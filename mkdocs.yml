@@ -17,10 +17,10 @@ nav:
       - More Topics: nissan/more_topics.md
 
 theme:
-  name: material  # Uses the popular Material theme for MkDocs
+  name: readthedocs  
 
 plugins:
-  - search  # Enables search functionality
+  - search  
 
 markdown_extensions:
   - toc:
