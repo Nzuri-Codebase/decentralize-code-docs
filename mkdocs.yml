@@ -1,0 +1,29 @@
+site_name: Decentralize Nzuri Web App source code Docs
+repo_url: https://github.com/Nzuri-Codebase/decentralize-code-docs.git
+
+nav:
+  - Home: index.md
+  - Honda:
+      - Overview: honda/index.md
+      - Setup: honda/setup.md
+      - Usage: honda/usage.md
+      - Troubleshooting: honda/troubleshooting.md
+      - More Topics: honda/more_topics.md
+  - Nissan:
+      - Overview: nissan/index.md
+      - Setup: nissan/setup.md
+      - Usage: nissan/usage.md
+      - Troubleshooting: nissan/troubleshooting.md
+      - More Topics: nissan/more_topics.md
+
+theme:
+  name: material  # Uses the popular Material theme for MkDocs
+
+plugins:
+  - search  # Enables search functionality
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition  # Allows adding notes/warnings
+  - codehilite  # Syntax highlighting for code blocks
