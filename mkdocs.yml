@@ -1,26 +1,55 @@
-site_name: Decentralize Nzuri Web App source code Docs
+site_name: Nzuri Automation Source Code Docs
 repo_url: https://github.com/Nzuri-Codebase/decentralize-code-docs.git
 
 nav:
   - Home: index.md
-  - Honda:
-      - Overview: honda/index.md
-      - Setup: honda/setup.md
-      - Usage: honda/usage.md
-      - Troubleshooting: honda/troubleshooting.md
-      - More Topics: honda/more_topics.md
-  - Nissan:
-      - Overview: nissan/index.md
-      - Setup: nissan/setup.md
-      - Usage: nissan/usage.md
-      - Troubleshooting: nissan/troubleshooting.md
-      - More Topics: nissan/more_topics.md
+  - Daily Late Tasks:
+      - Overview: late-tasks/index.md
+      - Usage: late-tasks/main.md
+  - Weekly Status Report:
+      - Overview: status-report/index.md
+      - Usage: status-report/main.md
+  - Decentralize-Nzuri:
+      - Overview: Decentralize-Nzuri/index.md
+      - Deployment:
+          - Docker: Decentralize-Nzuri/deployment/docker.md
+          - Azure: Decentralize-Nzuri/deployment/azure.md
+      - Streamlit:
+          - Overview: Decentralize-Nzuri/streamlit/index.md
+          - Honda:
+              - Overview: Decentralize-Nzuri/streamlit/honda/index.md
+              - Ask Dave:
+                  - Ask Dave docs: Decentralize-Nzuri/streamlit/honda/ask-dave/ask_dave.md
+              - High Deliverability:
+                  - High Deliverability docs: Decentralize-Nzuri/streamlit/honda/high-deliverability/high_del.md
+              - Informed Delivery:
+                  - Informed Delivery docs: Decentralize-Nzuri/streamlit/honda/informed-delivery/informed.md
+              - Remedy Spikes:
+                  - Remedy Spikes docs: Decentralize-Nzuri/streamlit/honda/remedy-spikes/remedy_spikes.md
+
+              - Setup: Decentralize-Nzuri/streamlit/honda/setup.md
+              - Usage: Decentralize-Nzuri/streamlit/honda/usage.md
+              - Troubleshooting: Decentralize-Nzuri/streamlit/honda/troubleshooting.md
+          - Nissan:
+              - Overview: Decentralize-Nzuri/streamlit/nissan/index.md
+              - Apprentice Graduates Placement:
+                  - Apprentice Graduates Placement docs: Decentralize-Nzuri/streamlit/nissan/apprentice-graduates-placement/placement.md
+              - ROI:
+                  - ROI docs: Decentralize-Nzuri/streamlit/nissan/roi/roi.md
+
+              - Setup: Decentralize-Nzuri/streamlit/nissan/setup.md
+              - Usage: Decentralize-Nzuri/streamlit/nissan/usage.md
+              - Troubleshooting: Decentralize-Nzuri/streamlit/nissan/troubleshooting.md
+      - Flask:
+          - Overview: Decentralize-Nzuri/flask/index.md
+      - InfluxDB:
+          - Overview: Decentralize-Nzuri/influxdb/index.md
 
 theme:
-  name: readthedocs  
+  name: readthedocs
 
 plugins:
-  - search  
+  - search
 
 markdown_extensions:
   - toc:
