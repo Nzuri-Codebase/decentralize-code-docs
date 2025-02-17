@@ -47,6 +47,20 @@ nav:
 
 theme:
   name: readthedocs
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - navigation.expand
+  - toc.integrate
+  palette:
+    scheme: default  # Light mode
+    primary: indigo
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  extra_css:
+    - stylesheets/extra.css
 
 plugins:
   - search
