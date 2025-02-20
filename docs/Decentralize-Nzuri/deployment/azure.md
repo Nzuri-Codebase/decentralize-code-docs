@@ -7,22 +7,24 @@
     2. **Flask API**: Handles user authentication and session tracking.
     3. **InfluxDB**: Stores time-series data for user login/logout events.
 
+- To continue with this, ensure to read the azure documentation on how to set up azure cloud shell or even just using a unix/linux-based terminal. It could also work for powershell but it is easier to use a unix/linux-based terminal to configure az for azure.
+
 ## Azure Container Registry (ACR)
-1. **Create ACR**:
+- **Create ACR**:
 ```bash
 az acr create --resource-group <resource-group> --name <acr-name> --sku Basic
 ```
-2. **Login to ACR**:
+- **Login to ACR**:
 ```bash
 az acr login --name <acr-name>
 ```
-3. **Tag Images**:
+- **Tag Images**:
 ```bash
 docker tag streamlit <acr-name>.azurecr.io/streamlit:latest
 docker tag flask <acr-name>.azurecr.io/flask:latest
 docker tag influxdb <acr-name>.azurecr.io/influxdb:latest
 ```
-4. **Push Images to ACR**:
+- **Push Images to ACR**:
 ```bash
 docker push <acr-name>.azurecr.io/streamlit:latest
 docker push <acr-name>.azurecr.io/flask:latest
@@ -84,7 +86,6 @@ az container create --resource-group <resource-group> --file deployment.yml
 - The application includes basic error handling for:
     - Docker build errors
     - Container startup failures
-    - SSL certificate generation errors
 
 ## Output
 - The application runs in Docker containers on Azure, accessible via your web browser.

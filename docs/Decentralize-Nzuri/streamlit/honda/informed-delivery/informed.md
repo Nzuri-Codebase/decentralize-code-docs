@@ -58,16 +58,16 @@ The main function that is run by the Streamlit application.
 Recursively lists files in a directory structure.
 
 **Parameters:**
-- `directory`: Root directory to search
+- `directory` (str): Root directory to search
 
 **Returns:**
-- Dictionary with month as key and list of file paths as value
+- Dictionary (dict) with month as key and list of file paths as value
 
 #### `load_month_dfs(month_dirs)`
 Loads and processes files into DataFrames.
 
 **Parameters:**
-- `month_dirs`: Dictionary of file paths by month
+- `month_dirs` (dict): Dictionary of file paths by month
 
 **Returns:**
 - Dictionary of DataFrames organized by month
@@ -76,16 +76,16 @@ Loads and processes files into DataFrames.
 Aggregates campaign data.
 
 **Parameters:**
-- `df`: Raw DataFrame to process
+- `df` (DataFrame): Raw DataFrame to process
 
 **Returns:**
-- Aggregated DataFrame
+- Aggregated DataFrame with calculated metrics (Dataframe)
 
 #### `get_campaigns(data_frames_by_month)`
 Extracts and calculates campaign metrics.
 
 **Parameters:**
-- `data_frames_by_month`: Dictionary of DataFrames by month
+- `data_frames_by_month` (dict): Dictionary of DataFrames by month
 
 **Returns:**
 - Dictionary of campaign metrics by month
@@ -94,7 +94,7 @@ Extracts and calculates campaign metrics.
 Calculates click and open rates.
 
 **Parameters:**
-- `month_campaigns`: Dictionary of campaign metrics
+- `month_campaigns` (dict)1: Dictionary of campaign metrics
 
 **Returns:**
 - DataFrame with calculated rates
@@ -103,7 +103,7 @@ Calculates click and open rates.
 Creates visualizations for open and click rates.
 
 **Parameters:**
-- `df`: DataFrame containing rate data
+- `df` (DataFrame): DataFrame containing rate data
 
 **Returns:**
 - Two Plotly Figure objects (open rate and click rate)

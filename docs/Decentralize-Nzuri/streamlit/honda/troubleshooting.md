@@ -2,16 +2,16 @@
 
 ## Common Issues
 1. **File Upload Errors**:
-   - Ensure the file format is correct (Excel or ZIP).
-   - Check the file structure and naming conventions.
+    - Ensure the file format is correct (Excel or ZIP).
+    - Check the file structure and naming conventions.  
 
 2. **Data Processing Errors**:
-   - Verify that the input files contain the required columns.
-   - Ensure there are no missing or malformed data entries.
+    - Verify that the input files contain the required columns.
+    - Ensure there are no missing or malformed data entries.
 
 3. **Visualization Errors**:
-   - Check if the data contains valid values for plotting.
-   - Ensure the date range is correctly specified.
+    - Check if the data contains valid values for plotting.
+    - Ensure the date range is correctly specified.
 
 ## Debugging Tips
 - Check the Streamlit logs for detailed error messages.

@@ -36,21 +36,20 @@ services:
 ```
 
 ## Running the Application
-1. Build the Docker images:
+- Build the Docker images:
 ```bash
 docker-compose build
 ```
-2. Start the containers:
+- Start the containers:
 ```bash
 docker-compose up
 ```
-3. Access the application at `http://localhost:8081`
+- Access the application at `http://localhost:8081`
 
 ## Error Handling
 - The application includes basic error handling for:
     - Docker build errors
     - Container startup failures
-    - SSL certificate generation errors
 
 ## Output
 - The application runs in Docker containers, accessible via HTTP/HTTPS.

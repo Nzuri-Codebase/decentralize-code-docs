@@ -4,18 +4,17 @@
 The pipeline is designed to run automatically via GitHub Actions on a cron schedule. It can also be run manually for testing or debugging purposes.
 
 ## Setting up
-* The first thing one needs to do is to clone the repository via the terminal command:
+- The first thing one needs to do is to clone the repository via the terminal command:
 ```bash
 git clone https://github.com/Nzuri-Codebase/nzuri-status-updates.git
 ```
-* The next thing one ought to do is to install the required packages via the terminal command:
+- The next thing one ought to do is to install the required packages via the terminal command:
 ```bash
 pip install -r requirements.txt
 ```
-- Create an app registration via the azure portal using the Nzuri Strategy email.
-- Copy and store securely the `client ID` and the `tenant ID` as it is used with the Microsoft Graph API in the pipeline.
-- The next step is to create a `client secret` which will also be used in the Microsoft Graph API. For security purposes, it is advisable to use a client secret for not more than 1 year.
-- In this particular instance though, all these have been created because this is an ongoing pipeline. An important thing that can be monitored is the expiration of the client secret.
+- To integrate the pipeline with the Microsoft Graph API, start by registering an application through the Azure portal using the Nzuri Strategy email. This registration process will generate a unique `client ID` and `tenant ID`, which are essential for authenticating API requests. Ensure these credentials are stored securely to prevent unauthorized access.
+- Next, create a `client secret` for the registered application. This secret is used in conjunction with the client ID and tenant ID to authenticate API requests. For enhanced security, it is recommended to set a limited lifespan for the client secret, ideally not exceeding 1 year. This ensures that even if the secret is compromised, its impact is minimized due to its short validity period.
+- Since this pipeline is designed for ongoing use, it is crucial to monitor the expiration date of the client secret to ensure uninterrupted operation. This can be achieved by setting reminders or implementing automated checks to alert the maintenance team when the secret is nearing expiration, allowing for timely renewal or rotation.
 
 ### GitHub Workflow
 The pipeline is configured to run on Mondays at 7:50 AM UTC for template creation and at 2:50 PM UTC for sending compiled document notifications. The workflows are defined in the `.github/workflows/` directory:
@@ -113,12 +112,11 @@ jobs:
 ```
 
 ### Manual Execution
-To run the pipeline manually:
-1. Install the required Python packages:
+- Install the required Python packages:
 ```bash
 pip install python-docx requests msal python-dotenv
 ```
-2. Set the required environment variables:
+- Set the required environment variables:
 ```bash
 export CLIENT_ID=<your-client-id>
 export CLIENT_SECRET=<your-client-secret>
@@ -134,11 +132,11 @@ export M7=<member7-email>
 export M8=<member8-email>
 export M9=<member9-email>
 ```
-3. Run the script for template creation:
+- Run the script for template creation:
 ```bash
 python create_template.py
 ```
-4. Run the script for sending notifications:
+- Run the script for sending notifications:
 ```bash
 python send_compiled_doc.py
 ```

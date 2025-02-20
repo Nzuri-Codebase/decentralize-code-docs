@@ -80,7 +80,7 @@ The function that calculates revenue by school.
 Extracts and formats the date from the file name.
 
 **Parameters:**
-- `file_name`: Name of the uploaded file
+- `file_name` (str): Name of the uploaded file
 
 **Returns:**
 - Formatted date string (`yyyy-mm-dd`)
@@ -89,7 +89,7 @@ Extracts and formats the date from the file name.
 Handles file selection for RO Monthly Trend files.
 
 **Returns:**
-- Two DataFrames (Apprentice and Graduate RO data)
+- Two DataFrames (Apprentice and Graduate RO data) 
 
 #### `pick_ntta()`
 Handles file selection for NTTA Status Report.
@@ -101,9 +101,9 @@ Handles file selection for NTTA Status Report.
 Calculates moving averages for projections.
 
 **Parameters:**
-- `df`: DataFrame to process
-- `num_rows_to_add`: Number of rows to add for projections
-- `max_window_size`: Maximum window size for moving average
+- `df` (DataFrame): DataFrame to process
+- `num_rows_to_add` (int): Number of rows to add for projections
+- `max_window_size` (int): Maximum window size for moving average
 
 **Returns:**
 - DataFrame with added projections
@@ -112,7 +112,7 @@ Calculates moving averages for projections.
 Writes a DataFrame to an Excel file.
 
 **Parameters:**
-- `df`: DataFrame to export
+- `df` (DataFrame): DataFrame to export
 
 **Returns:**
 - Excel file as bytes

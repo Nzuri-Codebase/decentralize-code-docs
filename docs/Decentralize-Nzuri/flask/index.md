@@ -9,8 +9,27 @@ The Flask API is designed to track user login and logout events, storing the dat
 3. **InfluxDB Integration**: Stores all events in InfluxDB for time-series analysis.
 
 ## Endpoints
-1. **`/track_login`**: Tracks user login events.
-2. **`/track_logout`**: Tracks user logout events and calculates session durations.
+
+### `/track_login`
+Tracks user login events.
+
+**Parameters:**
+- `email` (str): User's email address
+- `login_time` (str): Timestamp of login in ISO format
+
+**Returns:**
+- JSON response with status message and HTTP status code
+
+### `/track_logout`
+Tracks user logout events and calculates session duration.
+
+**Parameters:**
+- `email` (str): User's email address
+- `logout_time` (str): Timestamp of logout in ISO format
+- `session_duration` (float): Duration of session in seconds
+
+**Returns:**
+- JSON response with status message and HTTP status code
 
 ## Requirements
 - Python 3.8+

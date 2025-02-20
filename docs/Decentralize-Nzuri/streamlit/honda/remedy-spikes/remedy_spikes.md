@@ -1,7 +1,7 @@
 # Remedy Spikes
 
 ## Overview
-Highlighted below is the documentation of the source code of the application designed to analyze and visualize remedy data trends using moving averages. The application processes Excel files containing remedy data and generates interactive visualizations of the moving averages over time.
+Highlighted below is the documentation of the source code of the application designed to process and analyze remedy data trends using moving averages. The application accepts a compressed folder containing Excel files organized by month, processes the data, and provides visualizations of remedy trends and spikes.
 
 ## Requirements
 1. Python 3.8+
@@ -52,8 +52,8 @@ Calculates moving averages for each column in the DataFrame.
 
 **Parameters:**
 
-- `df`: Input DataFrame
-- `window`: Window size for moving average (default: 7)
+- `df` (Dataframe): Raw data
+- `window` (int): Window size for moving average (default: 7)
 
 **Returns:** 
 
@@ -64,7 +64,7 @@ Filters DataFrame based on date range.
 
 **Parameters:**
 
-- `df`: Input DataFrame
+- `df` (Dataframe): Processed DataFrame
 - `start_date`: Start date for filtering (optional)
 - `end_date`: End date for filtering (optional)
 
@@ -77,7 +77,7 @@ Creates a line chart visualization of moving averages.
 
 **Parameters:** 
 
-- `df`: DataFrame containing moving average data
+- `df` (Dataframe): DataFrame containing moving average data
 
 **Returns:** 
 
@@ -109,5 +109,5 @@ streamlit run pg.py
     - Ability to filter data by date range
 
 ## Limitations
-- Requires specific column names in the input file
-- Limited to Excel file format
+- Requires specific column names in the input files
+- Limited to ZIP file format

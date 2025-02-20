@@ -66,7 +66,7 @@ Extracts and formats the date from the file name.
 
 **Parameters:**
 
-- `file_name`: Name of the uploaded file
+- `file_name` (str): Name of the uploaded file
 
 **Returns:**
 
@@ -76,16 +76,16 @@ Extracts and formats the date from the file name.
 Adds a new column to a DataFrame.
 
 **Parameters:**
-- `df`: DataFrame to modify
-- `new_col_name`: Name of the new column
+- `df` (DataFrame): DataFrame to modify
+- `new_col_name` (str): Name of the new column
 
 #### `write_to_excel_with_frozen_panes_app(df, freeze_panes="M2")`
 Writes a DataFrame to an Excel file with frozen panes.
 
 **Parameters:**
 
-- `df`: DataFrame to export
-- `freeze_panes`: Cell position to freeze panes (default: "M2")
+- `df` (DataFrame): DataFrame to export
+- `freeze_panes` (str): Cell position to freeze panes (default: "M2")
 
 **Returns:**
 
@@ -96,8 +96,8 @@ Writes a DataFrame to an Excel file with frozen panes.
 
 **Parameters:**
 
-- `df`: DataFrame to export
-- `freeze_panes`: Cell position to freeze panes (default: "O2")
+- `df` (DataFrame): DataFrame to export
+- `freeze_panes` (str): Cell position to freeze panes (default: "O2")
 
 **Returns:**
 

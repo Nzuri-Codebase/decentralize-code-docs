@@ -35,7 +35,7 @@ Highlighted below is the documentation of the source code of the application des
 
 ## Main Functions
 
-### **`delivery.py`**
+### `delivery.py`
 
 #### `highdel_main()`
 The main function that is run by the Streamlit application.
@@ -61,27 +61,32 @@ The main function that is run by the Streamlit application.
 Recursively lists files in a directory structure.
 
 **Parameters:**
-- `directory`: Root directory to search
+
+- `directory` (str): Path to directory
 
 **Returns:**
 
-- Dictionary with month as key and list of file paths as value
+- Dictionary mapping months to file paths
 - Number of directories found
 
 #### `get_df_dict(dirs)`
 Reads and processes files into DataFrames.
 
 **Parameters:**
-- `dirs`: Dictionary of file paths by month
+
+- `dirs` (dict): Dictionary of file paths
 
 **Returns:**
-- Dictionary of DataFrames with processed data
+
+- Dictionary of processed DataFrames
+- Number of files processed
 
 #### `clean_file(df)`
 Cleans and processes individual DataFrames.
 
 **Parameters:**
-- `df`: Raw DataFrame to process
+
+- `df` (DataFrame): Raw data
 
 **Returns:**
 
@@ -90,25 +95,28 @@ Cleans and processes individual DataFrames.
 - Deployment date
 
 #### `calculate_percentage(row, total, delivered_total, unique_opens_total)`
-Calculates percentage metrics for email performance.
+Calculates performance percentages.
 
 **Parameters:**
 
-- `row`: DataFrame row to calculate
-- `total`: Total number of emails
-- `delivered_total`: Number of delivered emails
-- `unique_opens_total`: Number of unique opens
+- `row` (Series): Data row
+- `total` (float): Total value
+- `delivered_total` (float): Delivered total
+- `unique_opens_total` (float): Unique opens total
 
 **Returns:**
-- Calculated percentage value
+
+- Calculated percentage
 
 #### `plot_clicks(df)`
-Creates a bar chart visualization for unique clicks to opens.
+Creates visualization of click performance.
 
 **Parameters:**
-- `df`: DataFrame containing the data
+
+- `df` (DataFrame): Processed data
 
 **Returns:**
+
 - Plotly Figure object
 
 ## Running the Application

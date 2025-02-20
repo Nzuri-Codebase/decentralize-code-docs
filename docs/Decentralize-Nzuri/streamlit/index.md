@@ -24,13 +24,13 @@ The Streamlit applications are designed to process and analyze data for both Hon
 
 ## Running the Applications
 1. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 2. Run the application:
-   ```bash
-   streamlit run <application_name>.py
-   ```
+```bash
+streamlit run <application_name>.py
+```
 3. Access the application in your web browser at `http://localhost:8501`
 
 ## Error Handling

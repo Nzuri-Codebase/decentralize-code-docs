@@ -3,24 +3,24 @@
 ## Prerequisites
 - Python 3.8+
 - Required Python packages:
-  - streamlit
-  - pandas
-  - numpy
-  - openpyxl
+    - streamlit
+    - pandas
+    - numpy
+    - openpyxl
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/decentralize-nzuri.git
-   ```
-2. Navigate to the Nissan directory:
-   ```bash
-   cd decentralize-nzuri/src/apps/streamlit/nissan
-   ```
-3. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Clone the repository:
+```bash
+git clone https://github.com/your-repo/decentralize-nzuri.git
+```
+- Navigate to the Nissan directory:
+```bash
+cd decentralize-nzuri/src/apps/streamlit/nissan
+```
+- Install the required packages:
+```bash
+pip install -r requirements.txt
+```
 
 ## Running the Applications
 To run any Nissan application, use the following command:

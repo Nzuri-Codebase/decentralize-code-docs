@@ -33,12 +33,10 @@ Highlighted below is the documentation of the source code of the application des
 
 ## Main Functions
 
-### **`ask_dave.py`**
+### `dave_main()`
+Main function that handles the Streamlit interface and data processing workflow.
 
-#### `dave_main()`
-The main function that is run by the Streamlit application.
-
-**Functionality:**
+**Workflow:**
 
 1. Sets up the Streamlit interface
 2. Accepts a ZIP file upload
@@ -61,38 +59,48 @@ The main function that is run by the Streamlit application.
 Creates a bar chart visualization for a specified column.
 
 **Parameters:**
-- `df`: Pandas DataFrame containing the data
-- `column`: Column name to plot
+
+- `df` (DataFrame): Processed data
+- `column` (str): Column to visualize
 
 **Returns:**
+
 - Plotly Figure object
 
-#### `plot_line_summary(df, column)`
-Creates a line chart visualization for a specified column.
+### `plot_line_summary(df, column)`
+Creates a line chart visualization of summary data.
 
 **Parameters:**
-- `df`: Pandas DataFrame containing the data
-- `column`: Column name to plot
+
+- `df` (DataFrame): Processed data
+- `column` (str): Column to visualize
 
 **Returns:**
+
 - Plotly Figure object
 
-#### `list_files_recursive(directory)`
+### `list_files_recursive(directory)`
 Recursively lists files in a directory structure.
 
 **Parameters:**
-- `directory`: Root directory to search
+
+- `directory` (str): Path to directory
 
 **Returns:**
+
 - Dictionary with month as key and list of file paths as value
 
-#### `download_summary_as_excel(df, file_name)`
-Creates a downloadable Excel file from a DataFrame.
+### `download_summary_as_excel(df, file_name)`
+Creates a downloadable Excel file from processed data.
 
 **Parameters:**
 
-- `df`: Pandas DataFrame to export
-- `file_name`: Name of the output file (default: "monthly_summary.xlsx")
+- `df` (DataFrame): Processed data
+- `file_name` (str): Name for output file
+
+**Returns:**
+
+- Streamlit download button component
 
 ## Running the Application
 The application can be run independent of other applications within the Honda scope.

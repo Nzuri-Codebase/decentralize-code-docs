@@ -16,7 +16,7 @@ The Status Report Automation pipeline is a Python-based tool designed to streaml
 4. **Email Notification**: Sends an email to team members with the SharePoint link.
 
 ## Requirements
-- Python 3.x
+- Python 3.8+
 - Required Python packages:
     - `python-docx`
     - `requests`
