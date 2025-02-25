@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 ## Running the app
-To run the app itself it as a unit, one would need to change the directory from the root of the repository to the src repository then run the following command on your terminal:
+To run the app itself it as a unit, one would need to change the directory from the root of the repository to the `src/apps/streamlit` sub-directory then run the following command on your terminal:
 ```bash
 streamlit run main.py
 ```
